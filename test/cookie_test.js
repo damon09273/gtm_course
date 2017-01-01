@@ -47,21 +47,31 @@ function checkCookie(coupon_start){
     }
 }
 
+function toCouponAvailableDate(coupon_start){
+  date = new Date(coupon_start * 1000);
+  date.setDate(date.getDate() + 1);
+  return date
+}
+
 
 if (readCookie('coupon')) {
   var coupon_start = getCookie('coupon');
   if ( coupon_start ){
     switch(checkCookie(coupon_start)){
       case true:
-        console.log('coupon ok')
+        // coupon未過期，回傳coupon開始+24小時的台灣時間
+        toCouponAvailableDate(coupon_start)
         break;
       case false:
-        console.log('coupon bad')
+      // coupon過期，回傳coupon開始+24小時的台灣時間
+        toCouponAvailableDate(coupon_start)
         break;
     }
   }
 } else {
-    createCookie('coupon', '', 1);
-    console.log('create cookie');
+  // 新建coupon，當前時間+24小時的台灣時間
+    createCookie('coupon', '', 3);
+    coupon_start = getCookie('coupon');
+    toCouponAvailableDate(coupon_start)
 }
 </script>
