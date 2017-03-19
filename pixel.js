@@ -17,14 +17,25 @@ src="https://www.facebook.com/tr?id=557199714403315&ev=PageView&noscript=1"
 <!-- End Facebook Pixel Code -->
 
 
+//
+<script>
+  fbq('track', 'viewedVideo', {
+  url: {{換成影片URL的GTM變數名稱}},
+  action: {{換成影片播放的GTM變數名稱}}
+  });
+</script>
 
 // event -- viewcontent
-fbq('track', 'ViewContent');
+<script>
+  fbq('track', 'ViewContent');
+</script>
 
-
-// event -- addToCart 
-fbq('track', 'AddToCart');
-
+// event -- addToCart
+<script>
+  fbq('track', 'AddToCart');
+</script>
 
 // event -- Puchase
-fbq('track', 'Purchase', {value: '0.00', currency:'TWD'});
+<script>
+  fbq('track', 'Purchase', {value: {{換成訂單金額的GTM變數名稱}}, currency:'TWD'});
+</script>
