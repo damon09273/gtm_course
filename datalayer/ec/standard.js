@@ -1,6 +1,7 @@
 <script>
 window.dataLayer = window.dataLayer || []
 dataLayer.push({
+   'event': 'purchase',
    'transactionId': '1234',
    'transactionAffiliation': 'Acme Clothing',
    'transactionTotal': 38.26,
