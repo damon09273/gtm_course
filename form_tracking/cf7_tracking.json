@@ -1,0 +1,167 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2019-12-07 12:18:44",
+    "containerVersion": {
+        "path": "accounts/4701183865/containers/11019924/versions/5",
+        "accountId": "4701183865",
+        "containerId": "11019924",
+        "containerVersionId": "5",
+        "name": "CF7 Tracking",
+        "container": {
+            "path": "accounts/4701183865/containers/11019924",
+            "accountId": "4701183865",
+            "containerId": "11019924",
+            "name": "CF7",
+            "publicId": "GTM-WRWZKKZ",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1575705478319",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/4701183865/containers/11019924/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "4701183865",
+                "containerId": "11019924",
+                "tagId": "1",
+                "name": "CF7 Listener",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\ndocument.addEventListener( 'wpcf7mailsent', function( event ) {\n window.dataLayer.push({\n \"event\" : \"cf7submission\",\n \"formId\" : event.detail.contactFormId,\n \"response\" : event.detail.inputs\n })\n}); \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1575696018349",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "4701183865",
+                "containerId": "11019924",
+                "triggerId": "11",
+                "name": "CF7 Form Submission",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cf7submission"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1575696200096"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "4701183865",
+                "containerId": "11019924",
+                "variableId": "3",
+                "name": "DLV - CF7 Form ID",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "formId"
+                    }
+                ],
+                "fingerprint": "1575705652469",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701183865",
+                "containerId": "11019924",
+                "variableId": "2",
+                "name": "DLV - CF7 Message",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "response.2.value"
+                    }
+                ],
+                "fingerprint": "1575702817423",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "4701183865",
+                "containerId": "11019924",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "4701183865",
+                "containerId": "11019924",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "4701183865",
+                "containerId": "11019924",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "4701183865",
+                "containerId": "11019924",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "4701183865",
+                "containerId": "11019924",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1575721105818",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/4701183865/containers/11019924/versions/5?apiLink=version"
+    }
+}
