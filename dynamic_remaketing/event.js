@@ -1,5 +1,5 @@
 dataLayer.push({
-  'event': 'view_item',
+  'event': 'add_to_cart',
   'value': 78.45,
   'items' : [{
     'id': '1',
