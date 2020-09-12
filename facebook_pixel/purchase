@@ -1,1 +1,3 @@
-fbq('track', 'Purchase', {currency: "TWD", value: 30.00});
+<script>
+  fbq('track', 'Purchase', {currency: "TWD", value: 30.00});
+</script>
