@@ -5,7 +5,7 @@
       'img.element': event.target,
       'img.elementClasses': event.target.className || '',
       'img.elementId': event.target.id || '',
-      'img.alt': event.target.alt || '',
+      'img.alt': event.target.src.split("/")[3].split(".png")[0] || '',
       'img.elementUrl': event.target.href || event.target.action || '',
       'img.originalEvent': event
     });
